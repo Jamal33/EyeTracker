@@ -13,10 +13,10 @@ namespace EyeTrackerInfo
 
             try
             {
-                // Get the connected eye tracker.
+                // connected eye tracker.
                 tracker = GetConnectedEyeTracker();
 
-                // Create and run the eye tracker event loop.
+                //  eye tracker event loop.
                 eventLoopThread = CreateAndRunEventLoopThread(tracker);
 
                 // Connect to the eye tracker.
@@ -54,7 +54,7 @@ namespace EyeTrackerInfo
             // Get the URL to the eye tracker.
             var url = new EyeTrackerCoreLibrary().GetConnectedEyeTracker();
 
-            // Create a new eye tracker using the URL.
+            //  eye tracker.
             return new EyeTracker(url);
         }
 
