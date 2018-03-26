@@ -26,9 +26,9 @@ namespace EyeTrackerInfo
                 var info = tracker.GetDeviceInfo();
 
                 // Print information to the console.
-                Console.WriteLine("Eye tracker model: {0}", info.Model);
-                Console.WriteLine("Eye tracker serial number: {0}", info.SerialNumber);
-                Console.WriteLine("Firmware version: {0}", info.FirmwareVersion);
+                Console.WriteLine("IS4 Large Peripheral: {0}", info.Model);
+                Console.WriteLine("IS404-100107122583: {0}", info.SerialNumber);
+                Console.WriteLine("2.26.3-720bfb9: {0}", info.FirmwareVersion);
             }
             finally
             {
@@ -45,7 +45,7 @@ namespace EyeTrackerInfo
             }
 
             Console.WriteLine();
-            Console.WriteLine("Press ANY key to quit");
+            Console.WriteLine("Press JAMAL to ESC ");
             Console.ReadKey(true);
         }
 
@@ -68,7 +68,7 @@ namespace EyeTrackerInfo
                 }
                 catch (EyeTrackerException ex)
                 {
-                    Console.WriteLine("An error occurred in the eye tracker event loop: " + ex.Message);
+                    Console.WriteLine("error: " + ex.Message);
                 }
             });
             thread.Start();
